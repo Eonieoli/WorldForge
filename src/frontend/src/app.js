@@ -3,7 +3,7 @@ const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
 
 const BASE_URL = "https://backend-winter-wind-1715.fly.dev";
-const backendUrl = "http://127.0.0.1:8000";
+const backendUrl = "http://localhost:8000";
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
@@ -77,7 +77,7 @@ function scrollToBottom() {
 
 // Fetch assistant response from the selected backend endpoint
 async function getAssistantResponse(userMessage) {
-  const response = await fetch(`${backendUrl}/chat`, {
+  const response = await fetch(`${backendUrl}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
