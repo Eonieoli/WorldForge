@@ -12,6 +12,7 @@ from langchain_upstage import ChatUpstage
 from langchain_upstage import UpstageEmbeddings
 from pinecone import Pinecone, ServerlessSpec
 from pydantic import BaseModel
+from mangum import Mangum
 
 load_dotenv()
 
@@ -82,6 +83,8 @@ async def chat_endpoint(req: MessageRequest):
 @app.get("/")
 async def health_check():
     return {"status": "ok"}
+
+handler = Mangum(app)
 
 
 if __name__ == "__main__":
