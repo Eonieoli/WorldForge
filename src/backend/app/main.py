@@ -72,8 +72,8 @@ class MessageRequest(BaseModel):
 @app.post("/chat")
 async def chat_endpoint(req: MessageRequest):
     # Retrieve context from Pinecone
-    retrieved_docs = pinecone_retriever.retrieve(req.message)
-    context = "\n".join(doc["text"] for doc in retrieved_docs)
+    retrieved_docs = pinecone_retriever.invoke(req.message)
+    context = "\n".join(doc.page_content for doc in retrieved_docs)
 
     prompt = ChatPromptTemplate.from_messages(
         [
