@@ -28,5 +28,3 @@ services:
       - "8080:8080" # 프론트엔드 Vue.js 개발 서버 포트
     volumes:
       - ./frontend:/app # 코드 변경 시 컨테이너 내부 자동 반영
-    environment:
-      - VUE_APP_BACKEND_URL=http://backend:8000
