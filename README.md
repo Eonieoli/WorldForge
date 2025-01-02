@@ -25,9 +25,28 @@ ex2) 이름: 조이 윌리 웡카
 ---
 ## 로컬 실행 방법
 
-**1. 채워주세요:** ㅇ
+**1. Local 환경:**
+  + backend:
+    + `python -m venv venv`, `source venv/Scripts/activate`로 가상환경을 설정한다.
+    + `pip install -r requirements.txt`로 필요한 라이브러리를 설치한다.
+    + `python main.py`로 서버를 실행한다.
+  + frontend:
+    + `npm install`로 필요한 라이브러리를 설치한다.
+    + `npm run build`로 build한다.
+    + `npm start`로 서버를 실행한다.
+  + 실행:
+    + 브라우저에서 `http://localhost:1234`로 접속한다.
 
-**1. 채워주세요:** ㅇ
+**2. Docker 환경:**
+  + backend:
+    + 컨테이너화해서 서버를 실행할 수 있도록 Dockerfile을 준비한다.
+  + frontend:
+    + 컨테이너화해서 서버를 실행할 수 있도록 Dockerfile을 준비한다.
+  + docker compose:
+    + `docker-compose up --build`로 docker-compose.yml 파일을 실행한다.
+    + backend의 Dockerfile과 frontend의 Dockerfile을 실행하여 단일 호스트로 여러 컨테이너를 다루도록 한다.
+  + 실행:
+    + 브라우저에서 `http://localhost:8080`으로 접속한다.
 
 **1. 채워주세요:** ㅇ
 
