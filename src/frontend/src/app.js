@@ -3,7 +3,7 @@ const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
 
 const BASE_URL = "https://backend-winter-wind-1715.fly.dev";
-const backendUrl = "http://localhost:8000/chat";
+const backendUrl = "http://127.0.0.1:8000";
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
@@ -90,6 +90,9 @@ async function getAssistantResponse(userMessage) {
   }
 
   const data = await response.json();
+  if (typeof data !== "object") {
+    throw new Error("Invalid JSON response");
+  }
   return data.reply;
 }
 
