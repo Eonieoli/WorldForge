@@ -1,9 +1,10 @@
 const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
-// const apiSelector = document.getElementById("api-selector");
 
 const BASE_URL = "https://backend-winter-wind-1715.fly.dev";
+const backendUrl = "http://backend:8000/chat";
+
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
   const wrapper = document.createElement("div");
@@ -12,7 +13,6 @@ function createMessageBubble(content, sender = "user") {
   } else {
     wrapper.classList.add("mb-6", "flex", "flex-row-reverse", "space-x-3", "space-x-reverse");
   }
-  // wrapper.classList.add("mb-6", "flex", "items-start", "space-x-3");
 
   // Avatar (프로필 디자인)
   const avatar = document.createElement("div");
@@ -37,7 +37,6 @@ image.classList.add("w-full", "h-full", "object-cover", "rounded-full");
   // 프로필 디자인 (개별 적용)
   if (sender === "assistant") {
     avatar.classList.add("bg-gradient-to-br", "from-green-400", "to-green-600");
-    // avatar.textContent = "ㅋ";
     avatar.appendChild(image)
   } else {
     avatar.classList.add("bg-gradient-to-br", "from-orange-500", "to-orange-700");
@@ -76,25 +75,9 @@ function scrollToBottom() {
 }
 
 
-// Simulate assistant response
-// function getAssistantResponse(userMessage) {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve("This is a simulated response. You said: " + userMessage);
-//     }, 1500);
-//   });
-// }
-
 // Fetch assistant response from the selected backend endpoint
 async function getAssistantResponse(userMessage) {
-  // const mode = apiSelector.value;
-  // const url =
-  // mode === "assistant"
-  // ? "http://localhost:8000/assistant"
-  // : "http://localhost:8000/chat";
-  
-  const url = "https://backend-winter-wind-1715.fly.dev"
-  const response = await fetch(`${BASE_URL}/chat`, {
+  const response = await fetch(`${backendUrl}/chat`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
