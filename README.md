@@ -38,10 +38,8 @@ ex2) 이름: 조이 윌리 웡카
     + 브라우저에서 `http://localhost:1234`로 접속한다.
 
 **2. Docker 환경:**
-  + backend:
-    + 컨테이너화해서 서버를 실행할 수 있도록 Dockerfile을 준비한다.
-  + frontend:
-    + 컨테이너화해서 서버를 실행할 수 있도록 Dockerfile을 준비한다.
+  + backend와 frontend:
+    + 각 폴더에 컨테이너화해서 서버를 실행할 수 있도록 Dockerfile을 준비한다.
   + docker compose:
     + `docker-compose up --build`로 docker-compose.yml 파일을 실행한다.
     + backend의 Dockerfile과 frontend의 Dockerfile을 실행하여 단일 호스트로 여러 컨테이너를 다루도록 한다.
