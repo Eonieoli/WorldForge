@@ -6,7 +6,6 @@ from typing import List, Optional
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from langchain.chains import RetrievalQA
 from langchain_pinecone import PineconeVectorStore
 from langchain_upstage import ChatUpstage
 from langchain_upstage import UpstageEmbeddings
@@ -69,17 +68,6 @@ class ChatRequest(BaseModel):
 
 class MessageRequest(BaseModel):
     message: str
-
-
-# @app.post("/chat")
-# async def chat_endpoint(req: MessageRequest):
-#     qa = RetrievalQA.from_chain_type(llm=chat_upstage,
-#                                      chain_type="stuff",
-#                                      retriever=pinecone_retriever,
-#                                      return_source_documents=True)
-
-#     result = qa(req.message)
-#     return {"reply": result['result']}
 
 @app.post("/chat")
 async def chat_endpoint(req: MessageRequest):
