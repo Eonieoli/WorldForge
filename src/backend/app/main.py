@@ -29,7 +29,7 @@ if index_name not in pc.list_indexes().names():
         name=index_name,
         dimension=4096,
         metric="cosine",
-        spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+        spec=ServerlessSpec(cloud="aws", region="us-east-2"),
     )
 
 pinecone_vectorstore = PineconeVectorStore(index=pc.Index(index_name), embedding=embedding_upstage)

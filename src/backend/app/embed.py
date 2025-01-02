@@ -25,7 +25,7 @@ if index_name not in pc.list_indexes().names():
         name=index_name,
         dimension=4096,
         metric="cosine",
-        spec=ServerlessSpec(cloud="aws", region="us-east-1"),
+        spec=ServerlessSpec(cloud="aws", region="us-east-2"),
     )
 
 print("start")
@@ -42,8 +42,8 @@ for pdf_path in pdf_paths:
 
     # Split the document into chunks
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=100
+        chunk_size=300,
+        chunk_overlap=30
     )
     splits = text_splitter.split_documents(docs)
 

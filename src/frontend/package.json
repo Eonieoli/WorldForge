@@ -17,6 +17,7 @@
     "http-server": "^14.1.1",
     "parcel": "^2.13.2",
     "postcss": "^8.4.49",
+    "serverless-python-requirements": "^6.1.1",
     "tailwindcss": "^3.4.16"
   },
   "homepage": "https://SeonggeunPark.github.io/ssafy-2024-frontend-v1"
