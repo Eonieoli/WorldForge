@@ -36,7 +36,7 @@ pinecone_vectorstore = PineconeVectorStore(index=pc.Index(index_name), embedding
 
 pinecone_retriever = pinecone_vectorstore.as_retriever(
     search_type='mmr',  # default : similarity(유사도) / mmr 알고리즘
-    search_kwargs={"k": 3}  # 쿼리와 관련된 chunk를 3개 검색하기 (default : 4)
+    search_kwargs={"k": 6}  # 쿼리와 관련된 chunk를 6개 검색하기 (default : 4)
 )
 
 app = FastAPI()
