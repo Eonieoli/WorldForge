@@ -5,7 +5,7 @@
 
 ---
 ## 사용법
-**1. 링크 접속:** https://main.d10k4s3wmvu6mb.amplifyapp.com/
+**1. 링크 접속:** https://main.d1vitw0lmrffb0.amplifyapp.com/
 
 **2. 질문 및 요청하기:** 화면 하단 '조수에게 물어보세요'에 질문 작성 후 전송 버튼 클릭
 
