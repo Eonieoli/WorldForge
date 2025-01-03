@@ -7,6 +7,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000" # 백엔드 FastAPI 서버 포트
+    volumes:
+      - ./backend:/app  # 코드 변경 시 컨테이너 내부 자동 반영
     env_file:
       - .env  # .env 파일 참조
     environment:
@@ -22,3 +24,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080" # 프론트엔드 서버 포트
+    volumes:
+      - ./frontend:/app # 코드 변경 시 컨테이너 내부 자동 반영

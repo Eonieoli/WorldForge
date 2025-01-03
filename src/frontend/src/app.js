@@ -88,7 +88,7 @@ async function getAssistantResponse(userMessage) {
   if (!response.ok) {
     throw new Error("Network response was not ok");
   }
-
+  console.log("chat ok");
   const data = await response.json();
   if (typeof data !== "object") {
     throw new Error("Invalid JSON response");
