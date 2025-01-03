@@ -77,6 +77,8 @@ function scrollToBottom() {
 
 // Fetch assistant response from the selected backend endpoint
 async function getAssistantResponse(userMessage) {
+  console.log(backendUrl)
+
   const response = await fetch(`${backendUrl}`, {
     method: "POST",
     headers: {
