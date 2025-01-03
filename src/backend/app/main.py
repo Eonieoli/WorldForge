@@ -13,7 +13,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from pinecone import Pinecone, ServerlessSpec
 from pydantic import BaseModel
-from mangum import Mangum
+
 
 load_dotenv()
 
@@ -104,8 +104,6 @@ async def chat_endpoint(req: MessageRequest):
 @app.get("/")
 async def health_check():
     return {"status": "ok"}
-
-handler = Mangum(app)
 
 
 if __name__ == "__main__":
