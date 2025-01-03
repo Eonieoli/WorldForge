@@ -2,7 +2,7 @@ const chatContainer = document.getElementById("chat-container");
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
 
-const BASE_URL = "https://backend-winter-wind-1715.fly.dev";
+const BASE_URL = "https://backend-small-field-9093.fly.dev/";
 const backendUrl = "http://localhost:8000/chat";
 
 // Create a message bubble
