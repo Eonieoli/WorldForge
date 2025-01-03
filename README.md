@@ -41,7 +41,7 @@ ex2) 이름: 조이 윌리 웡카
   + backend와 frontend:
     + 각 폴더에 컨테이너화해서 서버를 실행할 수 있도록 Dockerfile을 준비한다.
   + docker compose (/src 디렉터리에서 명령어 실행):
-    + `docker-compose up --build`로 docker-compose.yml 파일을 실행한다.
+    + `docker-compose build`, `docker-compose up`으로 빌드하여 docker-compose.yml 파일을 실행한다.
     + backend의 Dockerfile과 frontend의 Dockerfile을 실행하여 단일 호스트로 여러 컨테이너를 다루도록 한다.
   + 실행:
     + 브라우저에서 `http://localhost:8080`으로 접속한다.
