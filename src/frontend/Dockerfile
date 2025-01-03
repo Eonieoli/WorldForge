@@ -5,12 +5,10 @@ FROM node:22.12.0-slim
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
-COPY package.json package-lock.json ./
-RUN npm install
-
 # Copy all project files
 COPY . .
+
+RUN npm install
 
 # Build the project
 RUN npm run build

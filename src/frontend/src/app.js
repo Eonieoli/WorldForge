@@ -3,7 +3,7 @@ const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
 
 const BASE_URL = "https://backend-winter-wind-1715.fly.dev";
-const backendUrl = "http://localhost:8000";
+const backendUrl = "http://localhost:8000/chat";
 
 // Create a message bubble
 function createMessageBubble(content, sender = "user") {
